@@ -1,0 +1,206 @@
+/* RESET & BASE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  color: #2E4A2E;
+  background-color: #F5F0E1;
+  line-height: 1.6;
+}
+
+h1, h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: #2E4A2E;
+}
+
+/* HERO SECTION */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background-color: #F5F0E1;
+}
+
+.hero .logo {
+  width: 250px;
+  max-width: 80%;
+  margin-bottom: 30px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #C9A227;
+}
+
+.hero .subheadline {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto 30px;
+}
+
+.button {
+  display: inline-block;
+  background-color: #2E4A2E;
+  color: #F5F0E1;
+  padding: 15px 30px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 700;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #C9A227;
+}
+
+/* STORY SECTION */
+.story {
+  padding: 60px 20px;
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.story h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #2E4A2E;
+}
+
+.story p {
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+}
+
+/* PRODUCT SECTION */
+.product {
+  padding: 60px 20px;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.product h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.product ul {
+  list-style: none;
+  max-width: 400px;
+  margin: 0 auto 30px;
+  text-align: left;
+}
+
+.product li {
+  padding: 8px 0;
+  font-size: 1.1rem;
+  border-bottom: 1px solid #e0dcc8;
+}
+
+.product p {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+}
+
+/* SIGNUP SECTION */
+.signup {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #F5F0E1;
+}
+
+.signup h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.signup p {
+  max-width: 600px;
+  margin: 0 auto 30px;
+  font-size: 1.1rem;
+}
+
+.email-form {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.email-form input {
+  flex: 1;
+  min-width: 250px;
+  padding: 15px;
+  border: 1px solid #2E4A2E;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: 'Lato', sans-serif;
+}
+
+.email-form button {
+  padding: 15px 30px;
+  background-color: #2E4A2E;
+  color: #F5F0E1;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.email-form button:hover {
+  background-color: #C9A227;
+}
+
+/* FOOTER */
+footer {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #2E4A2E;
+  color: #F5F0E1;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: #C9A227;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer p {
+  margin-bottom: 10px;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero .subheadline {
+    font-size: 1rem;
+  }
+
+  .story h2,
+  .product h2,
+  .signup h2 {
+    font-size: 1.5rem;
+  }
+
+  .email-form input,
+  .email-form button {
+    width: 100%;
+  }
+}
