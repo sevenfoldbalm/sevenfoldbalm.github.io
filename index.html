@@ -44,17 +44,46 @@
     <p>Soothes itchy scalps. Reduces flakiness. Moisturizes dry, irritated skin. No fillers. No synthetic fragrances. No secrets.</p>
   </section>
 
- <!-- EMAIL SIGNUP SECTION -->
+<!-- EMAIL SIGNUP SECTION -->
 <section class="signup" id="notify">
   <h2>Be first to know when we launch.</h2>
   <p>Join our list and get notified the moment Sevenfold Botanical Scalp Balm is available. Early subscribers get a launch discount.</p>
-  <form action="https://formspree.io/f/mzedrkoo" method="POST" class="email-form">
+  
+  <form id="sevenfold-form" method="POST" class="email-form">
     <input type="email" name="email" placeholder="Your email address" required>
-    <input type="hidden" name="_subject" value="New Sevenfold Launch Signup!">
-    <input type="hidden" name="_next" value="https://www.sevenfoldbalm.com/thanks.html">
     <button type="submit">Notify Me</button>
   </form>
+  
+  <p id="form-message" style="display:none; margin-top:15px; color:#2E4A2E;"></p>
 </section>
+
+<script>
+document.getElementById('sevenfold-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  
+  var form = e.target;
+  var formData = new FormData(form);
+  var messageEl = document.getElementById('form-message');
+  
+  // Replace with YOUR Web App URL
+  var scriptURL = 'https://script.google.com/macros/s/AKfycbxU6arTwqhA4J9EJE1-FFRsJELkibUf5R0YHFTDIvDnj6pEDdLBQed2VooE6NEQTSLd4A/exec';
+  
+  fetch(scriptURL, {
+    method: 'POST',
+    body: formData,
+    mode: 'no-cors'
+  })
+  .then(function() {
+    messageEl.textContent = 'Thank you! You are on the list.';
+    messageEl.style.display = 'block';
+    form.reset();
+  })
+  .catch(function(error) {
+    messageEl.textContent = 'Something went wrong. Please try again.';
+    messageEl.style.display = 'block';
+  });
+});
+</script>
 
   <!-- FOOTER -->
   <footer>
