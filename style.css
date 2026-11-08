@@ -1,7 +1,7 @@
 /* RESET & BASE */
 .hero {
   /* ADD THESE THREE LINES */
-  background-image: url('your-image-filename.png'); /* <--- CHANGE THIS */
+  background-image: url('hero-header.png'); /* <--- CHANGE THIS */
   background-size: cover;
   background-position: center;
   
