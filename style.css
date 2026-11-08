@@ -1,4 +1,37 @@
 /* RESET & BASE */
+.hero {
+  /* ADD THESE THREE LINES */
+  background-image: url('your-image-filename.png'); /* <--- CHANGE THIS */
+  background-size: cover;
+  background-position: center;
+  
+  /* KEEP YOUR EXISTING CODE */
+  padding: 120px 20px;
+  text-align: center;
+  position: relative;
+}
+
+/* ADD THIS BLOCK RIGHT BELOW .hero */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(245, 240, 225, 0.85); /* Cream overlay */
+  z-index: 1;
+}
+
+/* UPDATE YOUR .hero-content */
+.hero-content {
+  position: relative;
+  z-index: 2; /* Keeps text above the overlay */
+}
+
+/* UPDATE YOUR .hero .logo */
+.hero .logo {
+  width: 150px; /* Make it smaller for the header */
+  max-width: 80%;
+  margin-bottom: 20px;
+}
 * {
   margin: 0;
   padding: 0;
