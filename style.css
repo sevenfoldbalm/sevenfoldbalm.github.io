@@ -1,4 +1,35 @@
-/* RESET & BASE */
+.hero {
+  /* This adds the image as the background */
+  background-image: url('hero-header.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  /* This gives it height and centers the content */
+  padding: 120px 20px;
+  text-align: center;
+  position: relative;
+}
+
+/* Optional: Add a dark/cream overlay so the text is readable against the busy image */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(245, 240, 225, 0.85); /* Cream overlay, 85% opacity */
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2; /* Keeps the text above the overlay */
+}
+
+/* Make the logo smaller for the header */
+.hero-logo {
+  width: 150px;
+  margin-bottom: 20px;
+}/* RESET & BASE */
 * {
   margin: 0;
   padding: 0;
