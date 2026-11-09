@@ -7,11 +7,11 @@
      The first value (center) centers it horizontally. 
      The second value (20%) pushes the image down, showing the top portion. 
      You can adjust this number (try 15%, 25%, or 30%) until the lids are perfectly framed. */
-  background-position: center 5%; 
+  background-position: center 15%; 
   
   /* CLIP THE BOTTOM: 
      A smaller padding makes the strip shorter, chopping off the bottom. */
-  padding: 35px 70px; 
+  padding: 35px 20px; 
   
   text-align: center;
   position: relative;
