@@ -2,29 +2,33 @@
 .hero {
   background-image: url('hero-header.png');
   background-size: cover;
-  background-position: center 30%; /* Adjust to 50% if the jars get cut off */
-  padding: 40px 20px; /* MUCH SHORTER STRIP */
+  
+  /* FOCUS ON THE LIDS: 
+     The first value (center) centers it horizontally. 
+     The second value (20%) pushes the image down, showing the top portion. 
+     You can adjust this number (try 15%, 25%, or 30%) until the lids are perfectly framed. */
+  background-position: center 20%; 
+  
+  /* CLIP THE BOTTOM: 
+     A smaller padding makes the strip shorter, chopping off the bottom. */
+  padding: 35px 20px; 
+  
   text-align: center;
   position: relative;
   border-bottom: 3px solid #C9A227;
 }
 
-/* Remove the strong cream overlay completely */
-/*.hero::before {
-  display: none; 
-}*/
-
 .hero-content {
   position: relative;
   z-index: 2;
-  margin-top: 20px; /* PULLS THE TEXT CARD UP */
+  margin-top: 15px; 
   background: rgba(245, 240, 225, 0.95); 
   padding: 30px 20px;
   border-radius: 10px;
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15); /* Slightly stronger shadow to make the card pop */
 }
 
 .hero h1 {
