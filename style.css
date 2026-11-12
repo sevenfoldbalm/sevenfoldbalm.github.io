@@ -250,4 +250,32 @@ footer p {
   .email-form button {
     width: 100%;
   }
+/* USAGE & ADVISORY STYLES */
+.usage-info {
+  max-width: 600px;
+  margin: 30px auto;
+  text-align: left;
+  background-color: #F5F0E1; /* Cream background */
+  padding: 20px 30px;
+  border-radius: 8px;
+  border-left: 4px solid #C9A227; /* Gold accent line */
+}
+
+.usage-info h3 {
+  font-family: 'Montserrat', sans-serif;
+  color: #2E4A2E;
+  font-size: 1.1rem;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+.usage-info h3:first-child {
+  margin-top: 0;
+}
+
+.usage-info p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #333;
+}
 }
