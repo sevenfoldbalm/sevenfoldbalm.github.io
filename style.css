@@ -278,4 +278,78 @@ footer p {
   line-height: 1.5;
   color: #333;
 }
+/* TABBED USAGE INFO STYLES */
+.usage-tabs-container {
+  max-width: 600px;
+  margin: 30px auto;
+  text-align: left;
+  background-color: #F5F0E1; /* Cream background */
+  border-radius: 8px;
+  border-left: 4px solid #C9A227; /* Gold accent line */
+  overflow: hidden;
+}
+
+.tab-buttons {
+  display: flex;
+  background-color: #e8e2cf; /* Slightly darker cream for the tab bar */
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 15px;
+  background: none;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: #2E4A2E;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  border-bottom: 3px solid transparent;
+}
+
+.tab-btn:hover {
+  background-color: #dcd5bd;
+}
+
+.tab-btn.active {
+  background-color: #F5F0E1; /* Matches the content background */
+  border-bottom: 3px solid #2E4A2E; /* Green active indicator */
+}
+
+.tab-content {
+  display: none;
+  padding: 20px 30px;
+}
+
+.active-tab-content {
+  display: block;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.tab-content p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #333;
+  margin: 0;
+}
+
+/* Mobile Responsiveness for Tabs */
+@media (max-width: 600px) {
+  .tab-buttons {
+    flex-direction: column;
+  }
+  .tab-btn {
+    border-bottom: 1px solid #dcd5bd;
+  }
+  .tab-btn.active {
+    border-bottom: 1px solid #dcd5bd;
+    border-left: 4px solid #2E4A2E;
+  }
+}
 }
