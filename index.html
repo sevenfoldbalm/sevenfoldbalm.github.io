@@ -49,20 +49,32 @@
       <li><strong>7.</strong> Rosemary Oil</li>
     </ul>
     
-    <!-- NEW: DIRECTIONS & ADVISORIES -->
-    <div class="usage-info">
-      <h3>How to Use</h3>
-      <p>Apply a very small amount (about the size of a grain of rice) and massage it directly into the scalp. Let it sit for 20 minutes, then shampoo out. Do not apply heavily to the hair strands.</p>
+   
+         <!-- TABBED USAGE INFO -->
+    <div class="usage-tabs-container">
       
-      <h3>Keep Cool Advisory</h3>
-      <p>Our botanical balm is made with pure, unrefined ingredients. It is normal for the balm to soften or melt in transit during hot summer months. If this happens, simply place the jar in the refrigerator for 15 minutes to restore its solid texture.</p>
-      
-      <h3>A Note on Skin Types</h3>
-      <p>Formulated for the resilient skin of the scalp. If you have highly acne-prone facial skin, avoid dragging the product down onto your face.</p>
+      <!-- Tab Buttons -->
+      <div class="tab-buttons">
+        <button class="tab-btn active" onclick="openTab(event, 'how-to-use')">How to Use</button>
+        <button class="tab-btn" onclick="openTab(event, 'keep-cool')">Keep Cool</button>
+        <button class="tab-btn" onclick="openTab(event, 'skin-types')">Skin Types</button>
+      </div>
+
+      <!-- Tab Content -->
+      <div id="how-to-use" class="tab-content active-tab-content">
+        <p>Apply a very small amount (about the size of a grain of rice) and massage it directly into the scalp. Let it sit for 20 minutes, then shampoo out. Do not apply heavily to the hair strands.</p>
+      </div>
+
+      <div id="keep-cool" class="tab-content">
+        <p>Our botanical balm is made with pure, unrefined ingredients. It is normal for the balm to soften or melt in transit during hot summer months. If this happens, simply place the jar in the refrigerator for 15 minutes to restore its solid texture.</p>
+      </div>
+
+      <div id="skin-types" class="tab-content">
+        <p>Formulated for the resilient skin of the scalp. If you have highly acne-prone facial skin, avoid dragging the product down onto your face.</p>
+      </div>
+
     </div>
-    
-    <p style="margin-top: 30px; font-style: italic; color: #666;">Scan the QR code on your jar for full details, directions & our story.</p>
-  </section>
+ 
 
   <!-- EMAIL SIGNUP SECTION -->
   <section class="signup" id="notify">
