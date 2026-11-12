@@ -5,26 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sevenfold Botanical Scalp Balm | Seven Ingredients. Nothing More.</title>
   <meta name="description" content="A botanical scalp balm made with seven purposeful ingredients. Soothes itchy, flaky scalps naturally. Coming soon.">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=4">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
-
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  
+  <!-- Favicon Links -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
-  
 </head>
 <body>
 
-
- <!-- HERO SECTION -->
-<section class="hero">
-  <div class="hero-content">
-    <h1>Seven ingredients. Nothing more.</h1>
-    <p class="subheadline">A botanical scalp balm born from a simple discovery. Soothes itchy, flaky scalps without chemicals, fillers, or secrets.</p>
-    <a href="#notify" class="button">Notify Me When We Launch</a>
-  </div>
-</section>
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Seven ingredients. Nothing more.</h1>
+      <p class="subheadline">A botanical scalp balm born from a simple discovery. Soothes itchy, flaky scalps without chemicals, fillers, or secrets.</p>
+      <a href="#notify" class="button">Notify Me When We Launch</a>
+    </div>
+  </section>
 
   <!-- STORY SECTION -->
   <section class="story">
@@ -40,62 +39,46 @@
   <section class="product">
     <h2>Sevenfold Botanical Scalp Balm</h2>
     <p>A handcrafted balm made with seven purposeful ingredients:</p>
-    <ul>
-      <li>1. Virgin Coconut Oil</li>
-      <li>2. Shea Butter</li>
-      <li>3. Castor Oil</li>
-      <li>4. Beeswax</li>
-      <li>5. Vitamin E</li>
-      <li>6. Tea Tree Oil</li>
-      <li>7. Rosemary Oil</li>
+    <ul class="ingredient-list">
+      <li><strong>1.</strong> Virgin Coconut Oil</li>
+      <li><strong>2.</strong> Shea Butter</li>
+      <li><strong>3.</strong> Castor Oil</li>
+      <li><strong>4.</strong> Beeswax</li>
+      <li><strong>5.</strong> Vitamin E</li>
+      <li><strong>6.</strong> Tea Tree Oil</li>
+      <li><strong>7.</strong> Rosemary Oil</li>
     </ul>
-    <p>Soothes itchy scalps. Reduces flakiness. Moisturizes dry, irritated skin. No fillers. No synthetic fragrances. No secrets.</p>
+    
+    <!-- NEW: DIRECTIONS & ADVISORIES -->
+    <div class="usage-info">
+      <h3>How to Use</h3>
+      <p>Apply a very small amount (about the size of a grain of rice) and massage it directly into the scalp. Let it sit for 20 minutes, then shampoo out. Do not apply heavily to the hair strands.</p>
+      
+      <h3>Keep Cool Advisory</h3>
+      <p>Our botanical balm is made with pure, unrefined ingredients. It is normal for the balm to soften or melt in transit during hot summer months. If this happens, simply place the jar in the refrigerator for 15 minutes to restore its solid texture.</p>
+      
+      <h3>A Note on Skin Types</h3>
+      <p>Formulated for the resilient skin of the scalp. If you have highly acne-prone facial skin, avoid dragging the product down onto your face.</p>
+    </div>
+    
+    <p style="margin-top: 30px; font-style: italic; color: #666;">Scan the QR code on your jar for full details, directions & our story.</p>
   </section>
 
-<!-- EMAIL SIGNUP SECTION -->
-<section class="signup" id="notify">
-  <h2>Be first to know when we launch.</h2>
-  <p>Join our list and get notified the moment Sevenfold Botanical Scalp Balm is available. Early subscribers get a launch discount.</p>
-  
-  <form id="sevenfold-form" method="POST" class="email-form">
-    <input type="email" name="email" placeholder="Your email address" required>
-    <button type="submit">Notify Me</button>
-  </form>
-  
-  <p id="form-message" style="display:none; margin-top:15px; color:#2E4A2E;"></p>
-</section>
-
-<script>
-document.getElementById('sevenfold-form').addEventListener('submit', function(e) {
-  e.preventDefault();
-  
-  var form = e.target;
-  var formData = new FormData(form);
-  var messageEl = document.getElementById('form-message');
-  
-  // Replace with YOUR Web App URL
-  var scriptURL = 'https://script.google.com/macros/s/AKfycbwjnm4tkho2Q13rb0nA3huge6yoMFXGI-BWUQXTnPQ6xEtvfNxkoC_P2m9MvKExEde6/exec';
-  
-  fetch(scriptURL, {
-    method: 'POST',
-    body: formData,
-    mode: 'no-cors'
-  })
-  .then(function() {
-    messageEl.textContent = 'Thank you! You are on the list.';
-    messageEl.style.display = 'block';
-    form.reset();
-  })
-  .catch(function(error) {
-    messageEl.textContent = 'Something went wrong. Please try again.';
-    messageEl.style.display = 'block';
-  });
-});
-</script>
+  <!-- EMAIL SIGNUP SECTION -->
+  <section class="signup" id="notify">
+    <h2>Be first to know when we launch.</h2>
+    <p>Join our list and get notified the moment Sevenfold Botanical Scalp Balm is available. Early subscribers get a launch discount.</p>
+    
+    <form id="sevenfold-form" class="email-form">
+      <input type="email" name="email" placeholder="Your email address" required>
+      <button type="submit">Notify Me</button>
+    </form>
+    <p id="form-message" style="display:none; margin-top:15px; color:#2E4A2E; font-weight:bold;"></p>
+  </section>
 
   <!-- FOOTER -->
   <footer>
-    <p>© 2025 Sevenfold Botanical Scalp Balm. All rights reserved.</p>
+    <p>© 2026 Sevenfold Botanical Scalp Balm. All rights reserved.</p>
     <p>
       <a href="https://instagram.com/sevenfoldbalm" target="_blank">Instagram</a> · 
       <a href="https://facebook.com/sevenfoldbalm" target="_blank">Facebook</a> · 
@@ -105,5 +88,35 @@ document.getElementById('sevenfold-form').addEventListener('submit', function(e)
     <p>Contact: <a href="mailto:hello@sevenfoldbalm.com">hello@sevenfoldbalm.com</a></p>
   </footer>
 
+  <!-- FORM SUBMISSION SCRIPT -->
+  <script>
+    document.getElementById('sevenfold-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      var form = e.target;
+      var formData = new FormData(form);
+      var messageEl = document.getElementById('form-message');
+      
+      // IMPORTANT: Make sure this is your current Google Apps Script URL
+      var scriptURL = 'https://script.google.com/macros/s/AKfycb...YOUR_ACTUAL_SCRIPT_ID.../exec'; 
+      
+      messageEl.textContent = "Sending...";
+      messageEl.style.display = "block";
+
+      fetch(scriptURL, {
+        method: 'POST',
+        body: formData,
+        mode: 'no-cors'
+      })
+      .then(function() {
+        messageEl.textContent = 'Thank you! You are on the list. Check your email for a welcome note.';
+        messageEl.style.color = '#2E4A2E';
+        form.reset();
+      })
+      .catch(function(error) {
+        messageEl.textContent = 'Something went wrong. Please try again.';
+        messageEl.style.color = 'red';
+      });
+    });
+  </script>
 </body>
 </html>
