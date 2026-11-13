@@ -100,33 +100,23 @@
     <p>Contact: <a href="mailto:hello@sevenfoldbalm.com">hello@sevenfoldbalm.com</a></p>
   </footer>
 
-  <!-- FORM SUBMISSION SCRIPT -->
+    <!-- TAB SWITCHING SCRIPT -->
   <script>
-    document.getElementById('sevenfold-form').addEventListener('submit', function(e) {
-      e.preventDefault();
-      var form = e.target;
-      var formData = new FormData(form);
-      var messageEl = document.getElementById('form-message');
-      
-      // IMPORTANT: Make sure this is your current Google Apps Script URL
-      var scriptURL = 'https://script.google.com/macros/s/AKfycb...YOUR_ACTUAL_SCRIPT_ID.../exec'; 
-      
-      messageEl.textContent = "Sending...";
-      messageEl.style.display = "block";
+    // Select all tab buttons and tab contents
+    const tabButtons = document.querySelectorAll('.tab-btn');
+    const tabContents = document.querySelectorAll('.tab-content');
 
-      fetch(scriptURL, {
-        method: 'POST',
-        body: formData,
-        mode: 'no-cors'
-      })
-      .then(function() {
-        messageEl.textContent = 'Thank you! You are on the list. Check your email for a welcome note.';
-        messageEl.style.color = '#2E4A2E';
-        form.reset();
-      })
-      .catch(function(error) {
-        messageEl.textContent = 'Something went wrong. Please try again.';
-        messageEl.style.color = 'red';
+    tabButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const targetTabId = button.getAttribute('data-target');
+
+        // 1. Remove active class from all buttons and contents
+        tabButtons.forEach(btn => btn.classList.remove('active'));
+        tabContents.forEach(content => content.classList.remove('active-tab-content'));
+
+        // 2. Add active class to the clicked button and its corresponding content
+        button.classList.add('active');
+        document.getElementById(targetTabId).classList.add('active-tab-content');
       });
     });
   </script>
