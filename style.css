@@ -291,30 +291,25 @@ footer p {
 
 .tab-buttons {
   display: flex;
-  background-color: #e8e2cf; /* Slightly darker cream for the tab bar */
+  flex-direction: row; /* Forces horizontal on desktop */
+  background-color: #e8e2cf; 
 }
 
-.tab-btn {
-  flex: 1;
-  padding: 15px;
-  background: none;
-  border: none;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  font-size: 0.9rem;
-  color: #2E4A2E;
-  cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
-  border-bottom: 3px solid transparent;
-}
+/* ... (Keep the .tab-btn, .tab-content, etc. the same) ... */
 
-.tab-btn:hover {
-  background-color: #dcd5bd;
-}
-
-.tab-btn.active {
-  background-color: #F5F0E1; /* Matches the content background */
-  border-bottom: 3px solid #2E4A2E; /* Green active indicator */
+/* Mobile Responsiveness for Tabs */
+@media (max-width: 600px) {
+  .tab-buttons {
+    flex-direction: column; /* Stacks vertically on mobile */
+  }
+  .tab-btn {
+    border-bottom: 1px solid #dcd5bd;
+    border-left: none;
+  }
+  .tab-btn.active {
+    border-bottom: 1px solid #dcd5bd;
+    border-left: 4px solid #2E4A2E;
+  }
 }
 
 .tab-content {
