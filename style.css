@@ -347,4 +347,14 @@ footer p {
     border-left: 4px solid #2E4A2E;
   }
 }
+/* PRODUCT IMAGE STYLING */
+.product-hero-image {
+  max-width: 300px; /* Keeps it from getting too huge */
+  width: 100%;
+  height: auto;
+  border-radius: 12px; /* Softens the edges to match your brand */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15); /* Adds a premium shadow behind the jar */
+  margin: 20px auto 40px auto; /* Centers it and gives it breathing room */
+  display: block;
+}
 }
